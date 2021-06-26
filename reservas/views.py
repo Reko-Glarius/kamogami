@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from reservas.models import servicio
+
+
+class ServicioView(ListView):
+    model = servicio
+    template_name = "reservas/servicio-list.html"

@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from reservas.views import ServicioView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", ServicioView.as_view(), name="servicio-list")
 ]

@@ -1,0 +1,8 @@
+<h1> super pagin de pana</h1>
+<ul>
+    {% for servicio in object_list %}
+    <li><b>{{ servicio.name }}</b>: {{ servicio.description }}</li>
+    {% empty %}
+    <li>Ta' vacio</li>
+    {% endfor %}
+</ul>

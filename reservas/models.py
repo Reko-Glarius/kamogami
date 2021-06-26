@@ -8,7 +8,7 @@ class servicio(models.Model):
     description = models.TextField()
     reference_price = models.IntegerField()
 
-    def __str_(self):
+    def __str__(self):
         return f"{self.name} - {self.time_slots * 30} min"
 
 
