@@ -1,0 +1,12 @@
+{% load static %}
+<html>
+    <h1>LA pagina we</h1>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <img src= "{% static 'kamogami/sitelogo.png' %}" widht=100 height=100 alt="Logo">
+        {% block content %}{% endblock %}
+        <p> kongtacto +56912341234 ;) </p>
+    </body>
+</html>

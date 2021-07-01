@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} La pagina websXD {% endblock %}
+    {% block content%}
+    <h2 style="text-align:center"> super serbisios </h2>
+    {% for servicio in object_list %}
+        <li style="text-align:center">{{ servicio.name }}<br>{{ servicio.description }}<br>Presio: {{ servicio.reference_price }}</li>
+        <br>
+    {% endfor %}
+{% endblock %}
