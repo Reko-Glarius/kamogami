@@ -9,7 +9,7 @@ class servicio(models.Model):
     reference_price = models.IntegerField()
 
     def __str__(self):
-        return f"{self.name} - {self.time_slots * 30} min"
+        return {self.name,self.description,self.time_slots,self.reference_price}
 
 
 class reserva(models.Model):

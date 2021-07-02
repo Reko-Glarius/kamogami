@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from reservas.views import ServicioView
+from reservas import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", ServicioView.as_view(), name="servicio-list")
+    path("inicio/", views.inicio),
+    path("contacto/", views.contacto),
+    path("registro/", views.registro),
+    path("agendar-hora/", views.agendar),
+    path("login/", views.login),
+    path("recuperar/", views.recuperar),
+    path("", views.inicio)
 ]
