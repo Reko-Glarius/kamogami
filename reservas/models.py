@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from usuarios.models import User
 from kamogami.constants import STATUS_CHOICES
 
 class servicio(models.Model):

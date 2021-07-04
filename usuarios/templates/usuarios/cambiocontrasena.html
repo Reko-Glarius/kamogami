@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+  	<title>CAMBIO DE CONTRASEÑA</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+  	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/cambiarcontrasena.css' %}">
+  </head>
+  <body>
+    <img src="{% static 'usuarios/logo_1.png' %}" width="400px" height="250px">
+    <form class="form" method="POST">
+      {% csrf_token %}
+	    <h2>CAMBIO DE CONTRASEÑA</h2>
+	    <p type="Nueva Contraseña:">{{form.new_password1}}</p>
+      <p type="Confirmar Nueva Contraseña:">{{form.new_password1}}</p>
+      <br>
+	    <button>Guardar Cambios</button>
+	  </form>
+  </body>
+</html>

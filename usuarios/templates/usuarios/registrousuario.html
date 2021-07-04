@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+  	<title>CREAR USUARIO</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  {% load static %}
+  	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/formulario.css' %}">
+  	<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  </head>
+  <body>
+  	<img src="{% static 'usuarios/logo_1.png' %}" width="400px" height="250px">
+    <form class="form" method="POST">
+		{% csrf_token %}
+	    <h2>CREAR CUENTA</h2>
+	    <label for="Nombre">Nombre</label><input type="text" name="first_name" placeholder="Ej: Juan" required>
+	    <label for="Apellido">Apellido</label><input type="text" name="last_name" placeholder="Ej: Pérez" required>
+	    <label for="Teléfono">Teléfono</label><input type="text" name="phone" placeholder="Ej: 12345678">
+	    <label for="email">Correo Electrónico</label><input type="email" name="email" placeholder="Ej: juanperezm@gmail.com" required>
+	    <label for="Contraseña">Contraseña</label><input type="password" name="password1" placeholder="" required>
+	    <label for="Contraseña">Confirmar Contraseña</label><input type="password" name="password2" placeholder="" required>
+	    <button type="submit">Registrar cuenta</button>
+	</form>
+  </body>
+</html>
