@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
 
 from .views import IndexView, AboutView
 
@@ -22,7 +23,7 @@ from reservas import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", IndexView.as_view(), name="index"),
+    path("index_class/", IndexView.as_view(), name="index"),
     path("about/", AboutView.as_view(), name="about"),
     # TODO: Cambiar a class based views
     path("admin/", admin.site.urls),
@@ -34,4 +35,6 @@ urlpatterns = [
     path("miperfil/", views.mi_perfil),
     path("recuperar/", views.recuperar),
     path("", views.inicio),
+    # Desde usuarios
+    path("", include("usuarios.urls")),
 ]

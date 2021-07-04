@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+  	<title>RECUPERAR CUENTA</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+  	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/formulariorec.css' %}">
+  </head>
+  <body>
+    <img src="{% static 'usuarios/logo_1.png' %}" width="400px" height="250px">
+    <form class="form" method="POST">
+		{% csrf_token %}
+	    <h2>RECUPERAR CUENTA</h2>
+	    <p type="Ingresa el correo electrónico asociado a tu cuenta:"><input type="Email" name="email" placeholder="Ej: juanperezm@gmail.com"></input></p>
+      <br>
+	    <button type="submit">Enviar</button>
+	  </form>
+  </body>
+</html>

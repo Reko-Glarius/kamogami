@@ -1,0 +1,86 @@
+body{
+	background-color: #fff;
+	font-family: Arial;
+	width: 75%;
+}
+
+#main-container{
+	margin: 150px auto;
+	width: 600px;
+}
+
+div{
+	border-radius: 5px;
+	color: #444;
+	padding: .5em;
+	text-align: center;
+}
+
+h2{
+	position: relative;
+	left: 175px;
+}
+
+p{
+	position: relative;
+	left: 175px;
+}
+
+calendar-booking{
+	position: relative;
+	left: 150px;
+}
+
+.form-control{
+	position: absolute;
+	right: 685px;
+}
+.calendar-booking-schedule__buttons--left{
+	position: absolute;
+	left: 450px;
+	width: 150px;
+}
+.calendar-booking-schedule__buttons--right{
+	position: absolute;
+	right: 500px;
+	width: 150px;
+}
+
+table{
+	position: relative;
+	left: 300px;
+	text-align: center;
+	width: 75%;
+}
+
+th, td{
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #90EE90;
+}
+
+thead{
+	background-color: #90EE90;
+	border-bottom: solid 5px #0a0a0a;
+	color: #0a0a0a;
+}
+
+tr:nth-child(odd){
+	background-color: #ddd;
+}
+
+tr:hoover{
+	background-color: #90EE90;
+}
+
+button{
+	width: 90px;
+	border-radius: 15px;
+}
+
+.more_appointments{
+	position: relative;
+	left: 175px;
+	width: 150px;
+}
+

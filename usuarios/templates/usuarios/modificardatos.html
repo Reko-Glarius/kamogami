@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+  	<title>MODIFICAR DATOS</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  {% load static %}
+  	<link rel="stylesheet" type="text/css" href="{% static 'usuarios/formulariomoddat.css' %}">
+  </head>
+  <body>
+    <form class="form" method="POST">
+		{% csrf_token %}
+	    <h2>Mis Datos</h2>
+	    <p>{{form.email.label}}</p>
+	    <p>{{form.email}}</p>
+	    <p>{{form.first_name.label}}</p>
+	    <p>{{form.first_name}}</p>
+	    <p>{{form.last_name.label}}</p>
+	    <p>{{form.last_name}}</p>
+	    <p>{{form.phone.label}}</p>
+	    <p>{{form.phone}}</p>
+		<h4>Cambiar Contraseña</h4>
+		<p>{{form.old_password.label}}</p>
+		<p>{{form.old_password}}</p>
+		<p>{{form.password1.label}}</p>
+		<p>{{form.password1}}</p>
+		<p>{{form.password2.label}}</p>
+		<p>{{form.password2}}</p>
+	    <button type="submit">Guardar cambios</button>
+	  </form>
+  </body>
+</html>
