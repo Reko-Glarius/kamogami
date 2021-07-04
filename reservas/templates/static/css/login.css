@@ -150,3 +150,10 @@ button:hover {
         transform: translateY(5px);
     }
 }
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

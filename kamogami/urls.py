@@ -25,6 +25,7 @@ urlpatterns = [
     path("registro/", views.registro),
     path("agendar-hora/", views.agendar),
     path("login/", views.login),
+    path("miperfil/", views.mi_perfil),
     path("recuperar/", views.recuperar),
     path("", views.inicio)
 ]

@@ -31,7 +31,6 @@ def inicio(request):
         "card4":info[3].description,
         "card4_titulo":info[3].name,
     }
-    logger.error("ASD")
     ctx = Context(dcto)
     documento = plt.render(ctx)
     return HttpResponse(documento)
@@ -85,6 +84,18 @@ def login(request):
 
 def recuperar(request):
     doc_externo = open(os.path.join(BASE_DIR,"templates/recuperar/recuperar.html"))
+    plt = Template(doc_externo.read())
+    doc_externo.close()
+    dcto = {
+        
+    }
+    ctx = Context(dcto)
+    documento = plt.render(ctx)
+    return HttpResponse(documento)
+
+
+def mi_perfil(request):
+    doc_externo = open(os.path.join(BASE_DIR,"templates/miperfil/mi_perfil.html"))
     plt = Template(doc_externo.read())
     doc_externo.close()
     dcto = {
