@@ -18,8 +18,20 @@ from django.urls import path
 
 from .views import IndexView, AboutView
 
+from reservas import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", IndexView.as_view(), name="index"),
     path("about/", AboutView.as_view(), name="about"),
+    # TODO: Cambiar a class based views
+    path("admin/", admin.site.urls),
+    path("inicio/", views.inicio),
+    path("contacto/", views.contacto),
+    path("registro/", views.registro),
+    path("agendar-hora/", views.agendar),
+    path("login/", views.login),
+    path("miperfil/", views.mi_perfil),
+    path("recuperar/", views.recuperar),
+    path("", views.inicio),
 ]
