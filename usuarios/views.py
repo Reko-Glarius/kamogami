@@ -9,7 +9,7 @@ from usuarios.forms import CreateUserForm, EditUserForm
 
 def registro(request):
     if request.user.is_authenticated:
-        return redirect('index')
+        return redirect("index")
 
     if request.method == "POST":
         form = CreateUserForm(request.POST)
@@ -31,9 +31,11 @@ def perfil(request):
                 return redirect("perfil")
             form.save()
             messages.success(request, "Tu datos se actualizaron correctamente.")
-        
+
         else:
-            return render(request, "usuarios/modificardatos.html", context={"form": form})
+            return render(
+                request, "usuarios/modificardatos.html", context={"form": form}
+            )
 
         return redirect("perfil")
 

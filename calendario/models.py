@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class attention_hours(models.Model):
     day = models.DateField()
     start_time = models.TimeField(null=True, default=None)

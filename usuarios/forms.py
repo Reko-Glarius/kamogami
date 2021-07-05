@@ -1,17 +1,19 @@
 from django import forms
 from usuarios.models import User
 
+
 class CreateUserForm(forms.ModelForm):
     email = forms.EmailField(label="Correo electrónico")
-    first_name= forms.CharField(label="Nombre")
-    last_name= forms.CharField(label="Apellido")
-    phone= forms.CharField(label="Teléfono")
+    first_name = forms.CharField(label="Nombre")
+    last_name = forms.CharField(label="Apellido")
+    phone = forms.CharField(label="Teléfono")
     password1 = forms.CharField(
         label="Contraseña", widget=forms.PasswordInput, required=False
     )
     password2 = forms.CharField(
         label="Confirmar contraseña", widget=forms.PasswordInput, required=False
     )
+
     class Meta:
         model = User
         fields = ["email", "first_name", "last_name", "phone", "password1", "password2"]
@@ -35,11 +37,12 @@ class CreateUserForm(forms.ModelForm):
             user.save()
         return user
 
+
 class EditUserForm(forms.ModelForm):
     email = forms.EmailField(label="Correo electrónico")
-    first_name= forms.CharField(label="Nombre")
-    last_name= forms.CharField(label="Apellido")
-    phone= forms.CharField(label="Teléfono")
+    first_name = forms.CharField(label="Nombre")
+    last_name = forms.CharField(label="Apellido")
+    phone = forms.CharField(label="Teléfono")
     old_password = forms.CharField(
         label="Contraseña actual", widget=forms.PasswordInput, required=False
     )
@@ -49,6 +52,7 @@ class EditUserForm(forms.ModelForm):
     password2 = forms.CharField(
         label="Confirmar contraseña", widget=forms.PasswordInput, required=False
     )
+
     class Meta:
         model = User
         fields = ["email", "first_name", "last_name", "phone", "password1", "password2"]
@@ -58,7 +62,9 @@ class EditUserForm(forms.ModelForm):
         old_password = cleaned_data.get("old_password")
         new_password = cleaned_data.get("password1")
         confirm_password = cleaned_data.get("password2")
-        if (old_password or new_password or confirm_password) and not (old_password and new_password and confirm_password):
+        if (old_password or new_password or confirm_password) and not (
+            old_password and new_password and confirm_password
+        ):
             raise forms.ValidationError("Las contrasenas no coinciden")
 
         if new_password != confirm_password:

@@ -20,7 +20,9 @@ urlpatterns = [
     ),
     path(
         "reset_password/",
-        auth_views.PasswordResetView.as_view(template_name="usuarios/recuperarcontrasena.html"),
+        auth_views.PasswordResetView.as_view(
+            template_name="usuarios/recuperarcontrasena.html"
+        ),
         name="reset_password",
     ),
     path(
@@ -30,12 +32,14 @@ urlpatterns = [
     ),
     path(
         "reset/<uidb64>/<token>/",
-        auth_views.PasswordResetConfirmView.as_view(template_name="usuarios/cambiocontrasena.html"),
+        auth_views.PasswordResetConfirmView.as_view(
+            template_name="usuarios/cambiocontrasena.html"
+        ),
         name="password_reset_confirm",
     ),
     path(
         "reset_password_complete/",
         auth_views.PasswordResetCompleteView.as_view(),
         name="password_reset_complete",
-    )
+    ),
 ]
