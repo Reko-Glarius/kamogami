@@ -29,9 +29,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("inicio/", views.inicio),
     path("contacto/", views.contacto),
-    path("registro/", views.registro),
     path("agendar-hora/", views.agendar),
-    path("login/", views.login),
+    # deprectaed
     path("miperfil/", views.mi_perfil),
     path("recuperar/", views.recuperar),
     path("", views.inicio),

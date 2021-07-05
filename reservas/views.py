@@ -8,6 +8,7 @@ import os
 import logging
 logger = logging.getLogger(__name__)
 
+# Confused fubuki
 BASE_DIR = Path(__file__).resolve().parent
 
 
@@ -15,6 +16,7 @@ class ServicioView(ListView):
     model = servicio
     template_name = "reservas/servicio-list.html"
 
+# TODO: mover y refactorizar
 
 def inicio(request):
     doc_externo = open(os.path.join(BASE_DIR,"templates/inicio/inicio.html"))
@@ -36,7 +38,6 @@ def inicio(request):
     return HttpResponse(documento)
 
 
-
 def contacto(request):
     doc_externo = open(os.path.join(BASE_DIR,"templates/contacto/contacto.html"))
     plt = Template(doc_externo.read())
@@ -48,19 +49,8 @@ def contacto(request):
     documento = plt.render(ctx)
     return HttpResponse(documento)
 
-
-def registro(request):
-    doc_externo = open(os.path.join(BASE_DIR,"templates/registro/registro.html"))
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    dcto = {
-        
-    }
-    ctx = Context(dcto)
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
-
 def agendar(request):
+    # remove
     doc_externo = open(os.path.join(BASE_DIR,"templates/agendarHora/agendar.html"))
     plt = Template(doc_externo.read())
     doc_externo.close()
@@ -71,16 +61,6 @@ def agendar(request):
     documento = plt.render(ctx)
     return HttpResponse(documento)
 
-def login(request):
-    doc_externo = open(os.path.join(BASE_DIR,"templates/login/login.html"))
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    dcto = {
-        
-    }
-    ctx = Context(dcto)
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
 
 def recuperar(request):
     doc_externo = open(os.path.join(BASE_DIR,"templates/recuperar/recuperar.html"))
@@ -95,6 +75,7 @@ def recuperar(request):
 
 
 def mi_perfil(request):
+    #remove
     doc_externo = open(os.path.join(BASE_DIR,"templates/miperfil/mi_perfil.html"))
     plt = Template(doc_externo.read())
     doc_externo.close()
