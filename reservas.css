@@ -1,3 +1,4 @@
+
 body{
 	background-color: #fff;
 	font-family: Arial;
@@ -33,8 +34,15 @@ calendar-booking{
 
 .form-control{
 	position: absolute;
-	right: 685px;
+	right: 670px;
+	background: none repeat scroll 0 0 #4cbeff;
+	border-radius: 5px 5px 0 0;
+	cursor: pointer;
+	padding: 5px 10px;
+	z-index: 1;
+	
 }
+
 .calendar-booking-schedule__buttons--left{
 	position: absolute;
 	left: 450px;
@@ -47,10 +55,114 @@ calendar-booking{
 }
 
 table{
-	position: relative;
+    font-family:Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.7em;
+    text-align:center;
+    position: relative;
 	left: 300px;
 	text-align: center;
 	width: 75%;
+    border-collapse:collapse;
+}
+
+thead th{
+    padding:6px 10px;
+    text-transform:uppercase;
+    color:#444;
+    font-weight:bold;
+    text-shadow:1px 1px 1px #fff;
+    border-bottom:5px solid #444;
+}
+thead th:empty{
+    background:transparent;
+    border:none;
+}
+thead :nth-child(2){
+    background-color: #7FD2FF;
+}
+
+thead :nth-child(2){
+    -moz-border-radius:5px 0px 0px 0px;
+    -webkit-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+}
+
+thead :nth-child(3){
+    background-color: #45A8DF;
+}
+thead :nth-child(4){
+    background-color: #2388BF;
+}
+thead :nth-child(5),{
+    background-color: #096A9F;
+}
+thead :nth-child(5){
+    -moz-border-radius:0px 5px 0px 0px;
+    -webkit-border-top-right-radius:5px;
+    border-top-right-radius:5px;
+}
+
+
+tbody td{
+    padding:10px;
+}
+
+tbody tr:nth-child(4) td{
+    font-size:26px;
+    font-weight:bold;
+}
+
+tbody td:nth-child(even){
+    background-color:#444;
+    color:#444;
+    border-bottom:1px solid #444;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.39, rgb(189,189,189)),
+        color-stop(0.7, rgb(224,224,224))
+        );
+    background:-moz-linear-gradient(
+        center bottom,
+        rgb(189,189,189) 39%,
+        rgb(224,224,224) 70%
+        );
+    text-shadow:1px 1px 1px #fff;
+}
+
+tbody td:nth-child(odd){
+    background-color:#555;
+    color:#f0f0f0;
+    border-bottom:1px solid #444;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.39, rgb(85,85,85)),
+        color-stop(0.7, rgb(105,105,105))
+        );
+    background:-moz-linear-gradient(
+        center bottom,
+        rgb(85,85,85) 39%,
+        rgb(105,105,105) 70%
+        );
+    text-shadow:1px 1px 1px #000;
+}
+
+tbody td:nth-last-child(1){
+    border-right:1px solid #222;
+}
+tbody th{
+    color:#696969;
+    text-align:right;
+    padding:0px 10px;
+    border-right:1px solid #aaa;
 }
 
 th, td{
@@ -59,18 +171,12 @@ th, td{
 	background-color: #90EE90;
 }
 
-thead{
-	background-color: #90EE90;
-	border-bottom: solid 5px #0a0a0a;
-	color: #0a0a0a;
+tbody td {
+  text-align: center;
 }
 
-tr:nth-child(odd){
-	background-color: #ddd;
-}
-
-tr:hoover{
-	background-color: #90EE90;
+tfoot th {
+  text-align: right;
 }
 
 button{
@@ -83,4 +189,6 @@ button{
 	left: 175px;
 	width: 150px;
 }
+
+
 
